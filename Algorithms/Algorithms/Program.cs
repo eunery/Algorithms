@@ -27,10 +27,20 @@ namespace Algorithms
             }
             return minNum;
         }
-        static public long[] BinarySearch(long[] array)
+        static public long BinarySearch(long[] array, long element)
         {
-
-            return array;
+            long left = 0;
+            long right = array.Length - 1;
+            while (left < right)
+            {
+                long middle = (right + left) / 2;
+                if (element <= array[middle])
+                    right = middle;
+                else left = middle + 1;
+            }
+            if (array[right] == element)
+                return right;
+            return -1;
         }
         static public long[] SortArray(long[] array)
         {
@@ -52,13 +62,13 @@ namespace Algorithms
     }
     class Program
     {
-        public static long n = 1000;
+        public static int n = 10000;
         public static void ArrayFill(long[] array)
         {
             Random random = new Random();
             for (int i = 0; i < n; i++)
             {
-                array[i] = random.Next(1, 1000);
+                array[i] = random.Next(0, n);
             }
         }
         static void Main(string[] args)
@@ -72,13 +82,14 @@ namespace Algorithms
             maxNum = FindNumber.MaxNumber(maxNum, array);
             minNum = FindNumber.MinNumber(minNum, array);
 
-            Console.WriteLine(minNum+'\n'+maxNum);
+            Console.WriteLine(maxNum+"\n"+minNum);
 
             FindNumber.SortArray(array);
-            foreach (var item in array)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in array)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine(FindNumber.BinarySearch(array, 250));
         }
     }
 }
