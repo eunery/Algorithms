@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ef6oAZ8DPLo2+XG6zaKAbV8zrRtxs5gANJgK+/FwV6TmuEzr0gRbGBUIkgfyuSIfa13nsCJyfEMTh4jix5fPvA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sergei\\Documents\\GitKrakenProjects\\Algorithms\\Algorithms\\Algorithms\\Algorithms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sergei\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
